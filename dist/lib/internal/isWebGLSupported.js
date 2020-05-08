@@ -1,7 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.isWebGLSupported = ({ browser, }) => {
-    const attributes = {
+exports.isWebGLSupported = function (_a) {
+    var browser = _a.browser;
+    var attributes = {
         alpha: false,
         antialias: false,
         depth: false,
@@ -16,8 +17,8 @@ exports.isWebGLSupported = ({ browser, }) => {
     }
     // Keep reference to the canvas and context in order to clean up
     // after the necessary information has been extracted
-    const canvas = document.createElement('canvas');
-    const gl = canvas.getContext('webgl', attributes) || canvas.getContext('experimental-webgl', attributes);
+    var canvas = document.createElement('canvas');
+    var gl = canvas.getContext('webgl', attributes) || canvas.getContext('experimental-webgl', attributes);
     if (!gl || !(gl instanceof WebGLRenderingContext)) {
         return;
     }

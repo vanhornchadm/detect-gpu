@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.cleanRendererString = (rendererString) => {
-    let cleanedRendererString = rendererString.toLowerCase();
+exports.cleanRendererString = function (rendererString) {
+    var cleanedRendererString = rendererString.toLowerCase();
     // Strip off ANGLE and Direct3D version
     if (cleanedRendererString.includes('angle (') && cleanedRendererString.includes('direct3d')) {
         cleanedRendererString = cleanedRendererString.replace('angle (', '').split(' direct3d')[0];
