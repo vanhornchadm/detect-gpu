@@ -446,7 +446,6 @@ var GPU_BENCHMARK_SCORE_MOBILE = [
     '320 - Apple A13 Bionic GPU',
     '294 - Apple A12X Bionic GPU',
 ];
-//# sourceMappingURL=GPUBenchmark.js.map
 
 var cleanEntryString = function (entryString) {
     return entryString
@@ -454,7 +453,6 @@ var cleanEntryString = function (entryString) {
         .split('- ')[1] // Remove prelude score (`3 - `)
         .split(' /')[0];
 }; // Reduce 'apple a9x / powervr series 7xt' to 'apple a9x'
-//# sourceMappingURL=cleanEntryString.js.map
 
 var cleanRendererString = function (rendererString) {
     var cleanedRendererString = rendererString.toLowerCase();
@@ -468,7 +466,6 @@ var cleanRendererString = function (rendererString) {
     }
     return cleanedRendererString;
 };
-//# sourceMappingURL=cleanRendererString.js.map
 
 // Get benchmark entry's by percentage of the total benchmark entries
 var getBenchmarkByPercentage = function (benchmark, percentages) {
@@ -481,7 +478,6 @@ var getBenchmarkByPercentage = function (benchmark, percentages) {
     });
     return benchmarkTiers;
 };
-//# sourceMappingURL=getBenchmarkByPercentage.js.map
 
 var DetectUA = /** @class */ (function () {
     /**
@@ -738,12 +734,10 @@ var DetectUA = /** @class */ (function () {
 // Vendor
 var device = new DetectUA();
 var browser = device.browser, isMobile = device.isMobile, isTablet = device.isTablet, isDesktop = device.isDesktop;
-//# sourceMappingURL=getBrowserType.js.map
 
 var getEntryVersionNumber = function (entryString) {
     return entryString.replace(/[\D]/g, '');
 }; // Grab and concat all digits in the string
-//# sourceMappingURL=getEntryVersionNumber.js.map
 
 var getWebGLUnmaskedRenderer = function (gl) {
     var glExtensionDebugRendererInfo = gl.getExtension('WEBGL_debug_renderer_info');
@@ -751,7 +745,6 @@ var getWebGLUnmaskedRenderer = function (gl) {
         gl.getParameter(glExtensionDebugRendererInfo.UNMASKED_RENDERER_WEBGL);
     return renderer;
 };
-//# sourceMappingURL=getWebGLUnmaskedRenderer.js.map
 
 var isWebGLSupported = function (_a) {
     var browser = _a.browser;
@@ -777,7 +770,6 @@ var isWebGLSupported = function (_a) {
     }
     return gl;
 };
-//# sourceMappingURL=isWebGLSupported.js.map
 
 // Generated data
 var getGPUTier = function (options) {
