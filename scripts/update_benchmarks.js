@@ -33,7 +33,9 @@ function collectBenchmark(url) {
           let name = '';
 
           input.previousElement.contents.forEach(row => {
-            if (row.nextElement.text) {
+            if (row.nextElement.text === undefined) {
+              name = row.nextElement.nextElement.text;
+            } else if (row.nextElement.text) {
               name = row.nextElement.text;
             }
           });
