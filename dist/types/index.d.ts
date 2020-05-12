@@ -5,7 +5,11 @@ export interface IGetGPUTier {
     forceRendererString?: string;
     forceMobile?: boolean;
 }
-export declare const getGPUTier: (options?: IGetGPUTier) => {
-    tier: string;
+export interface GPUInfo {
+    tier: number;
+    platform: string;
     type: string;
-};
+    gpu: string;
+    renderer: string;
+}
+export declare const getGPUTier: (options?: IGetGPUTier) => GPUInfo;
